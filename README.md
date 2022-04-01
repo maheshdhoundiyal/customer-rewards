@@ -19,7 +19,9 @@ Sample data stored in src/main/resources/data.sql
 ##Rest URLs
 
 ###To fetch all customers - Get request http://localhost:8081/customers
-###To fetch particular customer - Get request http://localhost:8081/{id}
+
+###To fetch particular customer - Get request http://localhost:8081/customers/{id}
+
 ###To fetch particular customer -Get request http://localhost:8081/createCustomers post body {"name":"maheshTest"}
 
 ##h2 console information
