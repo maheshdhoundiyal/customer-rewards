@@ -5,8 +5,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.customer.rewards.entity.Customer;
 import com.customer.rewards.model.ResponseObject;
 import com.customer.rewards.service.CustomerRewardService;
 
@@ -24,6 +27,10 @@ public class CustomerRewardController {
 	@GetMapping("/customers/{id}")
 	public ResponseEntity<ResponseObject> getCustomer(@PathVariable Integer id) {
 		return new ResponseEntity<ResponseObject>(customerRewardService.getCustomerById(id), HttpStatus.OK);
-
+	}
+	
+	@PostMapping("/createCustomers")
+	public ResponseEntity<ResponseObject> createCustomer(@RequestBody Customer customer) {
+		return new ResponseEntity<ResponseObject>(customerRewardService.saveCustomer(customer), HttpStatus.OK);
 	}
 }

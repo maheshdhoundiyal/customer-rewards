@@ -1,4 +1,4 @@
-Spring Boot Customer Rewards Application.
+#Spring Boot Customer Rewards Application.
 
 Requirements
 For building and running the application you need:
@@ -16,14 +16,15 @@ mvn spring-boot:run
 
 Sample data stored in src/main/resources/data.sql
 
-Rest URLs
+##Rest URLs
 
-#To fetch all customers - http://localhost:8081/customers
-#To fetch particular customer - http://localhost:8081/{id}
+###To fetch all customers - Get request http://localhost:8081/customers
+###To fetch particular customer - Get request http://localhost:8081/{id}
+###To fetch particular customer -Get request http://localhost:8081/createCustomers post body {"name":"maheshTest"}
 
-h2 console information
+##h2 console information
 
-#URL - http://localhost:8081/h2-console
-#DBURL - jdbc:h2:mem:rewardsdb
+##URL - http://localhost:8081/h2-console
+##DBURL - jdbc:h2:mem:rewardsdb
 
 
